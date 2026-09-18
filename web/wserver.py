@@ -31,7 +31,7 @@ sabnzbd_client = SabnzbdClient(
 async def lifespan(app: FastAPI):
     global aria2, qbittorrent
     aria2 = Aria2HttpClient("http://localhost:6800/jsonrpc")
-    qbittorrent = await create_client("http://localhost:8090/api/v2/")
+    qbittorrent = await create_client("http://localhost:6000/api/v2/")
     yield
     await aria2.close()
     await qbittorrent.close()
