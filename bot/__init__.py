@@ -72,7 +72,7 @@ cpu_eater_lock = Lock()
 same_directory_lock = Lock()
 
 sabnzbd_client = SabnzbdClient(
-    host="http://localhost",
+    host="http://144.24.116.20",
     api_key="mltb",
     port="8070",
 )

@@ -40,8 +40,8 @@ class TorrentManager:
     @classmethod
     async def initiate(cls):
         cls.aria2, cls.qbittorrent = await gather(
-            Aria2WebsocketClient.new("http://localhost:6800/jsonrpc"),
-            create_client("http://localhost:6000/api/v2/"),
+            Aria2WebsocketClient.new("http://144.24.116.20:6800/jsonrpc"),
+            create_client("http://144.24.116.20:6000/api/v2/"),
         )
         cls.qbittorrent = wrap_with_retry(cls.qbittorrent)
 
